@@ -1,0 +1,23 @@
+{
+  "name": "ea-git",
+  "version": "0.0.1",
+  "description": "git helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hagb4rd/ea-git.git"
+  },
+  "keywords": [
+    "git",
+    "tools"
+  ],
+  "author": "hagb4rd@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hagb4rd/ea-git/issues"
+  },
+  "homepage": "https://github.com/hagb4rd/ea-git#readme"
+}
