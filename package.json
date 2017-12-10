@@ -1,6 +1,6 @@
 {
   "name": "ea-git",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "git helper",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,9 @@
   },
   "keywords": [
     "git",
+    "gist",
+    "api",
+    "paste",
     "tools"
   ],
   "author": "hagb4rd@gmail.com",
@@ -19,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/hagb4rd/ea-git/issues"
   },
-  "homepage": "https://github.com/hagb4rd/ea-git#readme"
+  "homepage": "https://github.com/hagb4rd/ea-git#readme",
+  "dependencies": {
+    "js-beautify": "^1.7.5",
+    "mime-types": "^2.1.17",
+    "minimist": "^1.2.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
 }
