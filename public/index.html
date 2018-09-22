@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>jslave Github</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+</style>
+<link rel="stylesheet" href="gallery.css">
+<script src="https://cdn.rawgit.com/hagb4rd/ea-webkit/master/dist/webkit.min.js"></script>
+<script src="https://cdn.rawgit.com/hagb4rd/ea-webkit/master/dist/require-async.js"></script>
+<script src="https://unpkg.com/hyperhtml@latest"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify-html.min.js"></script>
+</head>
+<body>
+	<pre><code class="frame JSON"></code></pre>
+<script> 
+var init=async()=>{
+  fetch('/github/user')
+  .then(resp=>resp.json())
+  .then(resp=>{
+    var code=document.querySelector('code');
+    //js_beautify, css_beautify, and html_beautify
+    code.innerHTML=$.escapeHTML(js_beautify(JSON.stringify(resp)));
+    
+		hljs.highlightBlock(code);
+	});
+};
+window.addEventListener('DOMContentLoaded', e=>{
+
+  // https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html
+  hljs.configure({useBR: true});
+  init()
+});
+</script>
+</body>
+</html>

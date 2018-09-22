@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: #9E9E9E;
+    background: #202529;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+#editor {
+    position: relative;
+    width: 100%;
+    height: 480px;
+}
+
+#panel {
+    position: absolute;
+    width: 640px;
+    left: 0;
+    right: 0;
+}
+
+#createBtn {
+    font-size: 14px;
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#createBtn:hover {
+    border: 2px solid white;
+}
+
+a {
+    background: transparent;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+    background: transparent;
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* ------- */
+.flex {
+    /* diplay: flex | flex-item | inline */
+    display: flex;
+    /* flex-direction: row | row-reverse | column | column-reverse; */
+    /* flex-wrap: nowrap | wrap | wrap-reverse; */
+    /* flex-flow: <flex-direction> | <flex-wrap> */
+    flex-flow: row nowrap;
+    /* justify-content:
+        flex-start | flex-end | center | space-between | space-around | space-evenly; */
+    justify-content: center;
+    /* align-items: flex-start | flex-end | center | baseline | stretch; */
+    align-items: flex-start;
+    /* align-content: flex-start | flex-end | center | space-between | space-around | stretch; */
+    align-content: center;
+}
+
+.flex-item {
+    /* diplay: flex | flex-item | inline */
+    display: flex-item;
+    /* order: <integer>; /* default is 0 } */
+    /* */
+    /* flex-grow: 0 | 1 | 2; */
+    /* flex-shrink: 0 | 1 | 2; */
+    /* flex-basis: auto | content | min-content | max-content | fit-content
+    /* flex: 0 1 auto; none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+    flex: 0 1 auto;
+}
+
+.tag {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    padding-left: 10px;
+    font-size: 11px;
+    line-height: 20px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    color: -webkit-link;
+    cursor: auto;
+    box-sizing: border-box;
+}
+
+.tags .tag span {
+    display: block;
+    position: relative;
+    padding: 0 6px 0 2px;
+    background: #2b2c33;
+    color: #fff;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.tags .tag span:before {
+    width: 8px;
+    height: 20px;
+    left: -8px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 8px solid #2b2c33;
+}
+
+.tags .tag span:before, .tags .tag span:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.tags .tag span:after {
+    content: '\2022';
+    left: -6px;
+    top: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.tags .tag span:before, .tags .tag span:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.frame {
+    position: absolute;
+    width: 90%;
+    height:90%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow-y: scroll;
+    /*
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+    z-index: 5;
+}
+
+#Frame * {
+    /* display: none; */
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+}

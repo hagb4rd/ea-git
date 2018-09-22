@@ -1,6 +1,6 @@
 {
   "name": "ea-git",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "git helper",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,18 @@
   },
   "homepage": "https://github.com/hagb4rd/ea-git#readme",
   "dependencies": {
+    "cli-highlight": "^2.0.0",
+    "connect-sqlite3": "^0.9.11",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "form-data": "^2.3.2",
     "js-beautify": "^1.7.5",
     "mime-types": "^2.1.17",
     "minimist": "^1.2.0",
-    "request": "^2.83.0",
+    "node-fetch": "^2.2.0",
+    "opn": "^5.4.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2"
   }
 }

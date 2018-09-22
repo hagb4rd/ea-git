@@ -1,0 +1,6 @@
+<script>
+var url=new URL(location.href);
+var token=url.searchParams.get('access_token');
+var githubBaseUrl='http://localhost:3000/github/';
+location.href=`${githubBaseUrl}callback/${encodeURIComponent(token)}`
+</script>
