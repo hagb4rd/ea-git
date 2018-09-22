@@ -1,17 +1,24 @@
 {
   "name": "ea-git",
-  "version": "1.0.5",
-  "description": "git helper",
-  "main": "index.js",
+  "version": "1.0.7",
+  "description": "git helper api endpoint express",
+  "main": "lib/route.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hagb4rd/ea-git.git"
   },
   "keywords": [
     "git",
     "gist",
     "api",
     "paste",
-    "tools"
+    "tools",
+    "express",
+    "endpoint",
+    "router"
   ],
   "author": "hagb4rd@gmail.com",
   "license": "MIT",
