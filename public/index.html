@@ -35,28 +35,29 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify-css.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.6/beautify-html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify-html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify.min.js"></script>
 </head>
 <body>
-	<pre><code class="frame JSON"></code></pre>
+<code class="frame JSON"></code>
 <script> 
 var init=async()=>{
   fetch('/github/user')
   .then(resp=>resp.json())
   .then(resp=>{
-    var code=document.querySelector('code');
-    //js_beautify, css_beautify, and html_beautify
-    code.innerHTML=$.escapeHTML(js_beautify(JSON.stringify(resp)));
-    
+		var code=document.querySelector('code');
+		var json=JSON.stringify(resp);
+		var prettyJson=js_beautify(json);
+		//js_beautify, css_beautify, and html_beautify
+		code.innerHTML=$.escapeHTML(prettyJson);
 		hljs.highlightBlock(code);
 	});
 };
 window.addEventListener('DOMContentLoaded', e=>{
 
   // https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html
-  hljs.configure({useBR: true});
+  //hljs.configure({useBR: true});
   init()
 });
 </script>

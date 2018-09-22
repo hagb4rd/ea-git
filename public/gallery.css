@@ -157,6 +157,11 @@ a:-webkit-any-link {
     position: absolute;
 }
 
+
+code {
+    white-space: pre;
+}
+
 .frame {
     position: absolute;
     width: 90%;
@@ -166,7 +171,6 @@ a:-webkit-any-link {
     bottom: 0;
     left: 0;
     margin: auto;
-    overflow-y: scroll;
     /*
     top: 50%;
     left: 50%;
@@ -182,3 +186,6 @@ a:-webkit-any-link {
     position: absolute;
     z-index: -1;
 }
+
+
+white-space: pre;
