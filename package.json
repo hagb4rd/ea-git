@@ -1,14 +1,10 @@
 {
   "name": "ea-git",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "git helper",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hagb4rd/ea-git.git"
   },
   "keywords": [
     "git",
